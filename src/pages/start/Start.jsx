@@ -3,11 +3,11 @@ import ImgAnimation from "../../components/mainImg/ImgAnimation";
 
 import Footer from "../../components/footer/Footer";
 
-import './Start.css';
+import styles from './Start.module.css';
 
 function Start() {
   return (
-    <div className="start-wrapper">
+    <div className={styles.startWrapper}>
       <h1>Welcome</h1>
       <ImgAnimation />
       <Footer />

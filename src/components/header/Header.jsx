@@ -1,6 +1,8 @@
-import styles from "./Header.css";
+import styles from "./Header.module.css";
+import React from "react";
+import { useState } from "react";
 import Logo from "../../assets/Logo.png";
-import menuHam from "../menuHam/MenuHam";
+//port menuHam from "../menuHam/MenuHam";
 
 function Header() {
   const handleLogoClick = () => {
