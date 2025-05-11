@@ -1,6 +1,8 @@
 import React from 'react';
-import ImgAnimation from '../components/mainImg/ImgAnimation';
-import Footer from '../components/footer/Footer';
+import ImgAnimation from "../../components/mainImg/ImgAnimation";
+
+import Footer from "../../components/footer/Footer";
+
 import './Start.css';
 
 function Start() {
