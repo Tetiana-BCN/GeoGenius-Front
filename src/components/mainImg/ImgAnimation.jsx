@@ -79,7 +79,7 @@ function ImgAnimation({ interval = 3000 }) {
           key={i}
           src={img}
           alt={`Slide ${i}`}
-          className={`{styles.imgAnim} ${i === index ? 'visible' : 'hidden'}`}
+          className={`${styles.imgAnim} ${i === index ? 'visible' : 'hidden'}`}
         />
       ))}
     </div>
