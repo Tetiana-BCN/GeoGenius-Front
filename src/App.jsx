@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useFormState } from 'react-dom';
 import Footer from './components/footer/Footer';
-
+import Start from './pages/start/Start';
 import './App.css'
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
     <>
       <div>
 
-
-<Footer />
+<Start />
+     
       </div>
     </>
   )

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './ImgAnimation.css'; 
+import styles from './ImgAnimation.css'; 
 
 function ImgAnimation({ images, interval = 3000 }) {
   const [index, setIndex] = useState(0);
