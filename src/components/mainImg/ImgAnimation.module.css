@@ -1,11 +1,13 @@
 .imgContainer {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+  width: 50vw;       
+  height: 50vw;     
+  border-radius: 50%;    
   overflow: hidden;
   position: relative;
   margin: auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+ 
 }
 
 .imgAnim {
@@ -15,6 +17,7 @@
   position: absolute;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  border-radius: 50%;    
 }
 
 .visible {

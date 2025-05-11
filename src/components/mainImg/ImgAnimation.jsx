@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import styles from "./ImgAnimation.module.css";
+import CrossfadeImage from 'react-crossfade-image';
+import styles from './ImgAnimation.module.css';
+
 import ba1 from "../../assets/images/ba1.jpeg";
 import ba2 from "../../assets/images/ba2.jpeg";
 import ba3 from "../../assets/images/ba3.jpeg";
@@ -46,12 +48,9 @@ import roma4 from "../../assets/images/roma4.jpeg";
 import wash1 from "../../assets/images/wash1.jpeg";
 import wash2 from "../../assets/images/wash2.jpeg";
 
-
-
 function ImgAnimation({ interval = 3000 }) {
   const [index, setIndex] = useState(0);
 
-  
   const allImages = [
     ba1, ba2, ba3, berlin, berlin2, bogota1, bogota2, bogota3, bras1, bras2,
     caracas1, caracas2, kyiv1, kyiv2, kyiv3, kyiv4, lima1, lima2, london1, london2,
@@ -60,7 +59,6 @@ function ImgAnimation({ interval = 3000 }) {
     roma1, roma2, roma3, roma4, wash1, wash2
   ];
 
-  
   const shuffledImages = useMemo(() => {
     return [...allImages].sort(() => Math.random() - 0.5);
   }, []);
@@ -74,17 +72,19 @@ function ImgAnimation({ interval = 3000 }) {
 
   return (
     <div className={styles.imgContainer}>
-      {shuffledImages.map((img, i) => (
-        <img
-          key={i}
-          src={img}
-          alt={`Slide ${i}`}
-          className={`${styles.imgAnim} ${i === index ? 'visible' : 'hidden'}`}
-        />
-      ))}
+      <CrossfadeImage
+        src={shuffledImages[index]}
+        duration={1000}
+        timingFunction="ease-in-out"
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          borderRadius: '50%',
+        }}
+      />
     </div>
   );
 }
 
 export default ImgAnimation;
- 
