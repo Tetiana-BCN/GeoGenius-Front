@@ -21,9 +21,17 @@
    
   .copyright {
     margin-top: 8px;
-    font-size:12px;
     color: #FFFFFF;
     text-align: center;
     margin-top: 20px;
+    font-size: 0.9rem;
+    
+  }
+
+  
+  .logo {
+    height: 40px;
+    
   }
   
+ 
