@@ -1,18 +1,14 @@
-import ImgAnimation from '../components/mainImg/ImgAnimation';
 import React from 'react';
-import styles from './Start.css';
-
-const images = [
-  'photo1.jpg',
-  'photo2.jpg',
-  'photo3.jpg',
-];
+import ImgAnimation from '../components/mainImg/ImgAnimation';
+import Footer from '../components/footer/Footer';
+import './Start.css';
 
 function Start() {
   return (
-    <div>
+    <div className="start-wrapper">
       <h1>Welcome</h1>
-      <ImgAnimation images={images} interval={4000} calssname={styles.img-anim}/>
+      <ImgAnimation />
+      <Footer />
     </div>
   );
 }
