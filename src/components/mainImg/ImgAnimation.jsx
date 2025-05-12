@@ -77,6 +77,7 @@ function ImgAnimation({ interval = 3000 }) {
         duration={1000}
         timingFunction="ease-in-out"
         style={{
+          
           width: '100%',
           height: '100%',
           objectFit: 'cover',

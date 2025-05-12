@@ -1,4 +1,7 @@
 .imgContainer {
+
+  display: flex;
+  aspect-ratio: 1 / 1;
   width: 50vw;       
   height: 50vw;     
   border-radius: 50%;    
@@ -28,3 +31,14 @@
 .hidden {
   z-index: 0;
 }
+
+
+
+
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
