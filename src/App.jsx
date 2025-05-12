@@ -12,10 +12,10 @@ function App() {
       <div>
 
 <Start />
-     
+<Footer />
       </div>
     </>
   )
 }
 
-export default App
+export default App;

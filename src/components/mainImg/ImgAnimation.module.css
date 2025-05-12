@@ -6,7 +6,7 @@
   border-radius: 50%;    
   overflow: hidden;
   position: relative;
-  margin: auto;
+  
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 
  
@@ -59,8 +59,8 @@
 
 @media (min-width: 769px)  {
   .imgContainer {
-    width: 20vw;
-    height: 20vw;
+    width: 25vw;
+    height: 25vw;
   }
 }
 

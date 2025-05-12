@@ -1,15 +1,56 @@
- 
+ body{
+  background-color:  #FFE4F1;
+
+ }
   .startWrapper {
-    display: flex;
-     
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    height: auto;
     
+   text-align: center;
+    padding: 0 3rem;
+    margin: 0;
+    height: auto;
+    background-color: /* #FDEAF5*/ #FFE4F1 /*#FCD0F0*/ /*#FDEAF5*/ /*#FBCDF1*/;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: auto;
        
   }
+
+  .startText{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    
+    text-align: center;
+  }
+
+  .italics {
+    font-style: italic;
+  }
+
+  .geo {
+    font-weight: 900;
+    color: blueviolet;
+  }
   
+
+  
+  .shapeWrap {
+    float: right;
+  
+    margin:  2rem;
+    shape-outside: circle();
+    clip-path: circle();
+    -webkit-shape-outside: circle();
+    -webkit-clip-path: circle();
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .animationInner {
+    width: 100%;
+    height: 100%;
+  }
+ 
