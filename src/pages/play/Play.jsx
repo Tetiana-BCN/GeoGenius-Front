@@ -1,7 +1,7 @@
 import styles from './Play.module.css';
 import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/Header';
-
+import Button from '../../components/button/Button';
 import { useEffect, useState } from 'react';
 import { fetchQuizQuestion } from '../../api/geoApi';
 

@@ -1,13 +1,17 @@
 import styles from "./Header.module.css";
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import Logo from "../../assets/logo.png";
 import { Link } from 'react-router-dom';
+import Button from '../../components/button/Button';
 //import menuHam from "../components/menuHam/MenuHam";
 
 function Header() {
+  const navigate = useNavigate();
+
   const handleLogoClick = () => {
-    window.location.reload();
+    navigate('/');  
   };
 
   return (
@@ -24,6 +28,7 @@ function Header() {
   
   <Link to="/play" className={styles.link}>Go, Genius!</Link>
 </p>
+<Button />
 </div>
   );
 };

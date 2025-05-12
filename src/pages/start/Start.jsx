@@ -2,7 +2,7 @@ import React from 'react';
 import ImgAnimation from "../../components/mainImg/ImgAnimation";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
-
+import Button from '../../components/button/Button';
 import styles from './Start.module.css';
 
 function Start() {

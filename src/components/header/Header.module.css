@@ -22,11 +22,27 @@
 
   }
   
-
+  .link {
+    font-size: 1.8rem;  
+    font-weight: bold;  
+    color: #3c2e80;  
+    text-decoration: none;  
+    padding: 10px 20px;  
+    border-radius: 60%;  
+    background-color: #fadbfa;  
+    transition: background-color 0.3s ease;  
+  }
+  
+  .link:hover {
+    background-color: #b9d8ed;  
+    color: #ffffff;  
+  }
   @media (max-width: 480px) {
     .header{
       height: 8%;
     }
+    .link {
+      font-size: 1rem;  }
 
     .logo {
       height: 4rem;
