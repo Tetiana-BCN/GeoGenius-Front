@@ -1,0 +1,40 @@
+
+.button {
+    padding: 0.45rem 0.9rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    outline: none;
+  }
+  
+  .primary {
+    background-color: #a563bd;
+    color: white;
+  }
+  
+  .primary:hover {
+    background-color: #8e4ba3;
+    transform: scale(1.05);
+  }
+  
+  .primary:disabled {
+    background-color: #b3b3b3;
+    cursor: not-allowed;
+  }
+  
+  .secondary {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+  
+  .secondary:hover {
+    background-color: #d6d6d6;
+  }
+  
+  .secondary:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+  }
+  
