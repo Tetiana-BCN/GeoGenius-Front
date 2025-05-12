@@ -2,8 +2,7 @@
 
   display: flex;
   aspect-ratio: 1 / 1;
-  width: 50vw;       
-  height: 50vw;     
+     
   border-radius: 50%;    
   overflow: hidden;
   position: relative;
@@ -41,4 +40,28 @@
   object-fit: cover;
   border-radius: 50%;
 }
+
+@media (max-width: 480px) {
+  .imgContainer {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .imgContainer {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+
+
+@media (min-width: 769px)  {
+  .imgContainer {
+    width: 20vw;
+    height: 20vw;
+  }
+}
+
 
