@@ -5,9 +5,10 @@
   .startWrapper {
     
    text-align: center;
-    padding: 0 3rem;
+    padding: 6rem 3rem;
+    
     margin: 0;
-    height: auto;
+    
     background-color: /* #FDEAF5*/ #FFE4F1 /*#FCD0F0*/ /*#FDEAF5*/ /*#FBCDF1*/;
     flex-direction: column;
     align-items: center;
@@ -15,9 +16,24 @@
     width: auto;
        
   }
+   h1 {
+    margin:  3rem 0;
+    margin-bottom: 1rem;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+   
+  
+    text-shadow: 
+      0 0 5px #fff, 
+      0 0 10px #f5a1e8, 
+      0 0 20px #f5a1e8, 
+      0 0 40px #c75fff, 
+      0 0 80px #c75fff;
+   }
 
   .startText{
-    font-size: 1.8rem;
+    
     font-weight: 400;
     color: #000000;
     margin: 0;
@@ -54,3 +70,43 @@
     height: 100%;
   }
  
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+
+    .startText{
+      font-size: 1rem;
+      
+    }
+  }
+  
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    
+    }
+
+    .startText{
+      font-size: 1.5rem;
+      
+    }
+  }
+  
+  
+  @media (min-width: 769px)  {
+    .startText{
+      font-size: 2rem;
+      
+    }
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+  
+  
+  
