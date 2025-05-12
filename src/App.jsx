@@ -18,7 +18,7 @@ function App() {
   return (
     <>
     <Routes>
-<Route path="/start" element={<Start />} />
+<Route path="/" element={<Start />} />
 <Route path="/play" element={<Play />} />
 
 </Routes>
