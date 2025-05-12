@@ -66,4 +66,50 @@
     font-weight: bold;
     color: #581381;
   }
+
+  .modeSelector {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+  }
+  
+  .modeSelector label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .modeSelector select {
+    padding: 0.4rem 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+    transition: border-color 0.3s ease;
+  }
+  
+  .modeSelector select:focus {
+    outline: none;
+    border-color: #a563bd;
+    box-shadow: 0 0 5px rgba(165, 99, 189, 0.5);
+  }
+  
+  .modeSelector button {
+    padding: 0.45rem 0.9rem;
+    font-size: 1rem;
+    background-color: #a563bd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modeSelector button:hover {
+    background-color: #8e4ba3;
+  }
+  
   
