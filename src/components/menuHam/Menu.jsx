@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./Menu.module.css";
+
 import Button from "../../components/button/Button"; 
 
 function Menu() {
@@ -36,7 +37,10 @@ function Menu() {
 
   
       <div className={`${styles.menu} ${isOpen ? styles.show : ""}`}>
-        <Link to="/" onClick={closeMenu}>Start</Link>
+      <div className={styles.closeIcon} onClick={toggleMenu}>
+    &times; 
+  </div>
+        <Link to="/" onClick={closeMenu}>Home</Link>
         <Link to="/play" onClick={closeMenu}>Play the Game!</Link>
         <Link to="/login" onClick={closeMenu}>Log In</Link>
         <Link to="/register" onClick={closeMenu}>Join us</Link>
