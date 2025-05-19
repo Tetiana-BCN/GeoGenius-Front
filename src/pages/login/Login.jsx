@@ -77,8 +77,8 @@ const LogIn = () => {
   
     return (
       <div className={styles.loginPage}>
-        <ImageContainer imgPath={logo} className={styles.imglogin} />
-        <h1 className={styles.welcome}>¡Bienvenide!</h1>
+        
+        <h1 className={styles.welcome}>Welcome to Geo Quizes!</h1>
   
         <form onSubmit={handleSubmit} className={styles.form}>
           
@@ -89,7 +89,7 @@ const LogIn = () => {
               type="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Correo electrónico"
+              placeholder="Email"
               showIcon={false}
             />
             {errors.email && <div className={styles.error}>{errors.email}</div>}
@@ -103,7 +103,7 @@ const LogIn = () => {
               type={passwordVisible ? "text" : "password"}
               value={formData.password}
               onChange={handleChange}
-              placeholder="Contraseña"
+              placeholder="Password"
               showIcon={false}
             />
             <div
@@ -121,7 +121,7 @@ const LogIn = () => {
           </div>
   
           
-          <h3 className={styles.forgot}>¿Olvidaste la contraseña?</h3>
+          <h3 className={styles.forgot}>Forgot your password?</h3>
   
         
           <Button type="submit" className={styles.buttonlogin}>
@@ -130,20 +130,12 @@ const LogIn = () => {
   
           
           <h3 className={styles.register}>
-            ¿No estás registrado?{" "}
-            <span className={styles.reglink}>Regístrate ahora</span>
+            Not a user?{" "}
+            <span className={styles.reglink}>Join us</span>
           </h3>
         </form>
   
-        <section className={styles.socialLogin}>
-          <hr />
-          <h3>O continuar con</h3>
-          <div className={styles.icons}>
-            <IconContainer variation="google" />
-            <IconContainer variation="apple" />
-            <IconContainer variation="facebook" />
-          </div>
-        </section>
+        
       </div>
     );
   };
