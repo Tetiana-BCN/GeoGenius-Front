@@ -9,7 +9,7 @@ import styles from "./Login.module.css";
 import Button from "../../components/button/Button";
 
 
-const LogIn = () => {
+function Login() {
     const [formData, setFormData] = useState({
       email: "",
       password: "",
@@ -140,4 +140,4 @@ const LogIn = () => {
     );
   };
   
-  export default LogIn;
+  export default Login;
