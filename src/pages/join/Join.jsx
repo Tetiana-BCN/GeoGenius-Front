@@ -9,7 +9,7 @@ function Join () {
     return (
     <>
    	 <Header />
-    	 <main>
+    	 <main className="join">
       	 
    				 <section>
    		     <h1>

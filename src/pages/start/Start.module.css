@@ -9,14 +9,14 @@
     
     margin: 0;
     
-    background-color: /* #FDEAF5*/ #FFE4F1 /*#FCD0F0*/ /*#FDEAF5*/ /*#FBCDF1*/;
+    background-color:  #FFE4F1;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: auto;
        
   }
-   h1 {
+   .welcomeTitle {
     margin:  3rem 0;
     margin-bottom: 1rem;
     padding: 0;
@@ -72,7 +72,7 @@
  
 
   @media (max-width: 480px) {
-    h1 {
+    .welcomeTitle {
       font-size: 1.5rem;
       margin: 0;
       margin-bottom: 1rem;
@@ -86,7 +86,7 @@
   
   
   @media (min-width: 481px) and (max-width: 768px) {
-    h1 {
+    .welcomeTitle {
       font-size: 2rem;
     
     }
@@ -103,7 +103,7 @@
       font-size: 2rem;
       
     }
-    h1 {
+    .welcomeTitle {
       font-size: 3.5rem;
     }
   }

@@ -1,4 +1,4 @@
-main {
+.join {
 	display: flex;
 	align-items: center;
 	width: 100%;
@@ -15,7 +15,7 @@ section {
 	padding: 0;
 }
 
-h1 .spanJoin {
+ .spanJoin {
 	color: #bc3a80;
 	text-shadow: 1px 1px 1px #bc3a80;
 }
@@ -31,81 +31,16 @@ section h1 {
 
 
 
-@media screen and (max-width: 680px) {
-	.circle1-join{
-	height: 10em;
-	width: 10em;
-	top: -5%;
-	left: 18%;
-}   
-    
-	.circle2-join {
-	height: 10em;
-	width: 10em;
-}
-    
-	main {
-		display: flex;
-		flex-direction: column;							
-}
-
-	section {
-		display: flex;
-		text-align: left;
-		justify-content: flex-start;
-		max-width: auto; 
-		margin-bottom: 5%;			
-	}
+@media (max-width: 480px) {
+ 
 }
 
 
-@media screen and (min-width: 681px) and (max-width: 1024px) {
-	.circle1-join{
-		height: 25em;
-		width: 25em;
-		top: -20%;
-		left: 18%;
-  }   
-    
-  .circle2-join {
-		height: 30em;
-		width: 30em;
-  }
-
-	main {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		align-content: center;
-  }
-
-	section {
-		display: flex;
-		justify-content: flex-end;
-		align-items: center; 
-		max-width: auto; 
-		margin-bottom: 5%;     
-  }
+@media (min-width: 481px) and (max-width: 768px) {
+  
 }
 
 
-
-@media screen and (min-width: 1025px) {
-	.circle1-join{
-		height: 35em;
-		width: 35em;
-		top: -20%;
-		left: 18%;
-	}   
-    
-  .circle2-join {
-		height: 40em;
-		width: 40em;
-	}
-    	
-	section {     
-		align-items: center; 
-		max-width: auto; 
-		margin-bottom: 5%;    
-  }
+@media (min-width: 769px)  {
+ 
 }

@@ -9,9 +9,9 @@ import Icons from '../../components/icons/Icons';
 function About() {
   return (
    <>
-    <div>
+    <div className={styles.container}>
       <Header />
-      <h1>🌍 About GeoGenius</h1>
+      <h1 className={styles.aboutUs}>🌍 About GeoGenius</h1>
      
    <p>
     

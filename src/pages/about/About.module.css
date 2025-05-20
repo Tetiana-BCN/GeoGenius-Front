@@ -1,4 +1,4 @@
-body {
+.container {
     min-height: 100vh;
     
     display: flex;
@@ -16,7 +16,7 @@ body {
     padding: 2rem;
   }
   
-   .title {
+   .aboutUs {
     font-size: 2.5rem;
     color: #581381;
     text-shadow: none;
@@ -25,5 +25,17 @@ body {
   }
   
  
+  @media (max-width: 480px) {
+ 
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
   
+}
+
+
+@media (min-width: 769px)  {
+ 
+}
   

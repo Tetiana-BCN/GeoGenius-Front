@@ -10,7 +10,7 @@ function Start() {
    <>
     <div className={styles.startWrapper}>
       <Header />
-      <h1>Welcome to GeoGenius — Where Curiosity Meets the World!</h1>
+      <h1 className={styles.welcomeTitle}>Welcome to GeoGenius — Where Curiosity Meets the World!</h1>
       <p className={styles.startText}>
       <div className={styles.shapeWrap}>
     <div className={styles.animationInner}>

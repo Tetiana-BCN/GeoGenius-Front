@@ -5,6 +5,7 @@ import Start from './pages/start/Start';
 import Play from './pages/play/Play';
 import Login from './pages/login/Login';
 import Join from './pages/join/Join';
+import About from './pages/about/About';
 import Header from './components/header/Header';
 import './App.css'
 import { Routes, Route } from 'react-router-dom';
