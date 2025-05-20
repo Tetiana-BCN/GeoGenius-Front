@@ -24,6 +24,7 @@
   padding: 3rem 1rem;
   color: #fff;
   text-align: center;
+  line-height: 2.5;
   text-shadow: 
     0 0 5px #fff, 
     0 0 10px #f5a1e8, 
@@ -33,7 +34,8 @@
 }
 
 .spanLog{
-  color:#c75fff
+  color:#c75fff;
+  font-weight: 1.5rem;
 }
 
 .form {
@@ -42,12 +44,12 @@
   justify-content: center;
   align-items: stretch;
   width: 100%;
-  padding: 0 2rem;
+  padding: 0;
   margin-bottom: 0;
  background-color: transparent; 
 }
 
-.inputWrapper,
+
 .passwordWrapper,
 .forgot,
 .buttonlogin {
@@ -61,14 +63,13 @@
  
 }
 
-.inputWrapper .inputMail{
-  background-color: #fff;
+.inputWrapper {
+  width: 100%;
 }
 .inputPass,
 .inputMail {
-  padding: 8px 40px 8px 12px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  
+  
   width: 100%;
   font-size: 1rem;
   height: 40px;
@@ -109,6 +110,7 @@
   cursor: pointer;
   font-weight: bold;
   padding-bottom: 1.5rem;
+  padding-left: 0.8rem;
 }
 
 .register {
@@ -130,16 +132,16 @@
   max-width: 100%; 
   box-sizing: border-box;
   margin: 0;
-  width: 100%; 
-  max-width: 100%; 
+  
+ 
   box-sizing: border-box;
-  padding: 1rem; 
+  padding: 0.8rem; 
   background-color: #581381; 
   color: #fff;
   font-size: 1.5rem;
   font-weight: 700;
   border: none; 
-  border-radius: 20px; 
+  border-radius: 30px; 
   cursor: pointer; 
   transition: background-color 0.3s ease; 
 }
@@ -222,22 +224,7 @@
     padding: 3rem;
   }
 
-  .form {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .inputPass,
-  .inputMail {
-    padding: 8px 40px 8px 12px;
-    font-size: 1rem;
-    height: 45px;
-  }
-
-  
-
  
-
   .forgot,
   .reglink {
     font-size: 1rem;
