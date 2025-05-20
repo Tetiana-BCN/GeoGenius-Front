@@ -5,6 +5,7 @@ import Footer from "../../components/footer/Footer";
 import { useNavigate } from "react-router-dom";
 import Input from "../../components/input/Input";
 import logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 import styles from "./Login.module.css";
 import Button from "../../components/button/Button";
@@ -79,7 +80,7 @@ function Login() {
     return (
       <div className={styles.loginPage}>
         <Header />
-        <h1 className={styles.welcome}>Welcome to Geo Quizes! <br/> Login</h1>
+        <h1 className={styles.welcome}>Welcome to Geo Quizes! <br/><span className={styles.spanLog}>Login</span> </h1>
   
         <form onSubmit={handleSubmit} className={styles.form}>
           
@@ -92,6 +93,7 @@ function Login() {
               onChange={handleChange}
               placeholder="Email"
               showIcon={false}
+              className={styles.inputMail}
             />
             {errors.email && <div className={styles.error}>{errors.email}</div>}
           </div>
@@ -106,6 +108,7 @@ function Login() {
               onChange={handleChange}
               placeholder="Password"
               showIcon={false}
+               className={styles.inputPass}
             />
             <div
               className={styles.eyeIconWrapper}
@@ -125,14 +128,15 @@ function Login() {
           <h3 className={styles.forgot}>Forgot your password?</h3>
   
         
-          <Button type="submit" className={styles.buttonlogin}>
+          <Button type="submit" label="Login" className={styles.buttonlogin}>
             Login
           </Button>
   
           
           <h3 className={styles.register}>
             Not a user?{" "}
-            <span className={styles.reglink}>Join us</span>
+            <Link to="/join" className={styles.reglink}>Join us</Link>
+            
           </h3>
         </form>
   

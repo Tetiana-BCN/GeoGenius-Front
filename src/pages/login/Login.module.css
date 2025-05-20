@@ -1,3 +1,10 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .loginPage {
   display: flex;
   flex-direction: column;
@@ -5,235 +12,234 @@
   justify-content: center;
   padding: 0;
   width: 100%;
-  
   margin: 0;
-  background-color: #ffffff;
-  display: flex;
-  height:auto;
-   max-height: 100vh;
-   text-align: center;
-     
+  background-color: transparent;
+  height: auto;
+  max-height: 100vh;
+  text-align: center;
   overflow-y: auto;
+}
+
+.welcome {
+  padding: 3rem 1rem;
+  color: #fff;
+  text-align: center;
+  text-shadow: 
+    0 0 5px #fff, 
+    0 0 10px #f5a1e8, 
+    0 0 20px #f5a1e8, 
+    0 0 40px #c75fff, 
+    0 0 80px #c75fff;
+}
+
+.spanLog{
+  color:#c75fff
 }
 
 .form {
   display: flex;
   flex-direction: column;
- 
   justify-content: center;
   align-items: stretch;
   width: 100%;
+  padding: 0 2rem;
   margin-bottom: 0;
-  padding-left: 2rem;
-    
-  padding-right: 2rem;
+ background-color: transparent; 
 }
 
-.welcome {
-   
-  text-align: center;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-    font-size: 2.5rem;
-    color: #581381;
-    text-shadow: 0 0 10px #f5a1e8;
-    margin-bottom: 2rem;
-  
-     margin: 0;
-  
-  font-size: 3rem;
-  
-  color: #000000;
-  
-  font-weight: bold;
-  
- 
-  
-}
-
-.button {
-  width: 100%;
-  max-width: 100%; 
-  box-sizing: border-box;
-  
-}
 .inputWrapper,
 .passwordWrapper,
 .forgot,
-.button {
+.buttonlogin {
   margin-bottom: 0; 
 }
-
-
-
-
-  
-  .forgot {
-  
-  font-weight: 400;
-  
-  font-size: 0.8rem;
-  
-  color: #71727A;
-  
-  text-align: left;
-  
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  
-  margin: 0;
-  
-  width: 100%;
-    color: #0096FF;
-  cursor: pointer;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  margin: 0.75rem 0;
-  font-weight: bold;;
-  font-size: 0.95rem;
- 
-  
-  }
-
-  .register{
-    text-align: center;
-  }
-
-.reglink {
-  color: #0096FF;
-  text-decoration: none;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 0.8rem;
-}
-
-
 
 .inputWrapper {
   position: relative;
   width: 100%;
   margin-bottom: 1rem;
+ 
 }
-.input {
 
+.inputWrapper .inputMail{
+  background-color: #fff;
+}
+.inputPass,
+.inputMail {
   padding: 8px 40px 8px 12px;
-  
   border-radius: 5px;
-  
   border: 1px solid #ccc;
-  
   width: 100%;
-  
   font-size: 1rem;
-  
   height: 40px;
-  
   box-sizing: border-box;
-  
-  }
+  background-color: #fff;
+}
 
-  .input::placeholder {
+.input::placeholder {
+  color: #aaa;
+  padding-left: 2px;
+}
 
-    color: #aaa;
-    
-    padding-left: 2px;
-    
-    }
-    .eyeIconWrapper {
+.eyeIconWrapper {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #777;
+}
 
-      position: absolute;
-      
-      top: 50%;
-      
-      right: 12px;
-      
-      transform: translateY(-50%);
-      
-      cursor: pointer;
-      
-      font-size: 1.2rem;
-      
-      color: #777;
-      
-      }
-      
-      .eyeIconWrapper:hover {
-        color: #007BFF;
-      
-      }
+.eyeIconWrapper:hover {
+  color: #007BFF;
+}
+
 .passwordWrapper {
   position: relative;
   width: 100%;
   margin-bottom: 1rem;
 }
 
-
-
-
-.socialLogin {
-  width: 100%;
-  text-align: center;
-  margin-top: 2rem;
-  display: flex;
-
-justify-content: center;
-
-flex-direction: column;
-
-align-items: center;}
-
-.icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 0.5rem;
-  width: 80%;
-  margin: 1rem auto;
-gap: 1rem;
-
-box-shadow: 0 8px 4px -4px rgba(0, 0, 0, 0.4);
-
-padding-bottom: 1.5rem;
-
-
+.forgot {
+  font-size: 0.8rem;
+  color: #8A2BE2;
+  text-align: left;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+  padding-bottom: 1.5rem;
 }
 
-.socialLogin h3 {
-
+.register {
   text-align: center;
-  
-  margin-bottom: 1rem;
-  
-  }
+  color: #71727A;
+  font-size: 0.9rem;
+}
 
-.imglogin {
+.reglink {
+  color: #8A2BE2;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
 
+.buttonlogin {
   width: 100%;
-  
-  height: auto;
-  
-  max-height: 35vh;
-  
+  max-width: 100%; 
+  box-sizing: border-box;
   margin: 0;
-  
-  padding: 0;
-  
-  border: 0;
-  
-  }
+  width: 100%; 
+  max-width: 100%; 
+  box-sizing: border-box;
+  padding: 1rem; 
+  background-color: #581381; 
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none; 
+  border-radius: 20px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.buttonlogin:hover {
+  background-color: #d156dc; 
+}
 
 
-  .form {
-    padding: 0;
-margin: 0;  }
+
+
 
 @media (max-width: 480px) {
- 
+  .loginPage {
+    padding: 1rem;
+  }
+
+  .form {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .welcome {
+    font-size: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .inputPass,
+  .inputMail {
+    padding: 8px 16px 8px 12px;
+    font-size: 0.9rem;
+    height: 35px;
+  }
+
+  .buttonlogin {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+
+
+  .forgot,
+  .reglink {
+    font-size: 0.7rem;
+  }
 }
 
 
 @media (min-width: 481px) and (max-width: 768px) {
-  
+  .loginPage {
+    padding: 2rem;
+  }
+
+  .form {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .inputPass,
+  .inputMail {
+    padding: 8px 20px 8px 12px;
+    font-size: 1rem;
+    height: 40px;
+  }
+
+  .buttonlogin {
+    padding: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .welcome {
+    font-size: 2rem;
+    padding: 2rem 1rem;
+  }
 }
 
 
-@media (min-width: 769px)  {
+@media (min-width: 769px) {
+  .loginPage {
+    padding: 3rem;
+  }
+
+  .form {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .inputPass,
+  .inputMail {
+    padding: 8px 40px 8px 12px;
+    font-size: 1rem;
+    height: 45px;
+  }
+
+  
+
  
+
+  .forgot,
+  .reglink {
+    font-size: 1rem;
+  }
 }

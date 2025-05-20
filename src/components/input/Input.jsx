@@ -13,7 +13,8 @@ function Input({
   items = [],
   showIcon = true,
   name,
-}) {
+
+ }) {
   const filteredItems = items.filter((item) =>
     item.toLowerCase().includes(value.toLowerCase())
   );
@@ -26,7 +27,7 @@ function Input({
       {showIcon && (
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/61d432a72ff1dada2a8f96db060757b2443a3653?placeholderIfAbsent=true&apiKey=b846614d0ea04d12bdbfa651b1d58a0f"
-            alt="Icon of the main page"
+            alt="Icon"
             className={styles.icon}
           />
         )}
@@ -56,3 +57,4 @@ function Input({
 }
 
 export default Input;
+
