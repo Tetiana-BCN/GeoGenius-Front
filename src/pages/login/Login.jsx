@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 import { useNavigate } from "react-router-dom";
 import Input from "../../components/input/Input";
 import logo from "../../assets/logo.png";
@@ -77,7 +78,7 @@ function Login() {
   
     return (
       <div className={styles.loginPage}>
-        
+        <Header />
         <h1 className={styles.welcome}>Welcome to Geo Quizes! <br/> Login</h1>
   
         <form onSubmit={handleSubmit} className={styles.form}>
@@ -132,11 +133,10 @@ function Login() {
           <h3 className={styles.register}>
             Not a user?{" "}
             <span className={styles.reglink}>Join us</span>
-          
           </h3>
         </form>
   
-        
+        <Footer />
       </div>
     );
   };

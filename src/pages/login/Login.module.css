@@ -10,7 +10,10 @@
   background-color: #ffffff;
   display: flex;
   height:auto;
-
+   max-height: 100vh;
+   text-align: center;
+     
+  overflow-y: auto;
 }
 
 .form {
@@ -43,22 +46,10 @@
   
   font-weight: bold;
   
-
-  
-   
+ 
   
 }
 
-.forgot {
-  
-  color: #0096FF;
-  cursor: pointer;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  margin: 0.75rem 0;
-  font-weight: bold;;
-  font-size: 0.95rem;
-  
-}
 .button {
   width: 100%;
   max-width: 100%; 
@@ -91,7 +82,12 @@
   margin: 0;
   
   width: 100%;
-  
+    color: #0096FF;
+  cursor: pointer;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0.75rem 0;
+  font-weight: bold;;
+  font-size: 0.95rem;
  
   
   }
