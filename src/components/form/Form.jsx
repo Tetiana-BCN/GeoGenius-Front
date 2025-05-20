@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Modal from "../../components/modal/Modal";
 import { FaEye, FaEyeSlash } from "react-icons/fa"; 
 import styles from "./Form.module.css"; 
+import Button from "../../components/button/Button";
+
 function Form() {
   const [formData, setFormData] = useState({
     name: "",
@@ -82,13 +84,13 @@ function Form() {
       {showModal && (
         <Modal>
           <div className={styles.modalContent}>
-            <p>¿Are you sure you want to save the changes?</p>
+            <p>Are you sure you want to save changes?</p>
             <div className={styles.modalButtons}>
               <button
                 className={styles.modalButtonYes}
                 onClick={() => handleModalConfirm("yes")}
               >
-                Sí
+                Yes
               </button>
               <button
                 className={styles.modalButtonNo}
@@ -125,7 +127,7 @@ function Form() {
         />
         {errors.email && <div className={styles.error}>{errors.email}</div>}
 
-        <label className={styles.label}>Contraseña:</label>
+        <label className={styles.label}>Password:</label>
         <div className={styles.passwordWrapper}>
           <input
             type={passwordVisible ? "text" : "password"}
@@ -145,9 +147,9 @@ function Form() {
 
        
 
-        <button type="submit" className={styles.button}>
-          Save
-        </button>
+        <Button type="submit" className={styles.button}
+          label="Save"
+        />
       </form>
     </div>
   );
