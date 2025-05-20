@@ -13,7 +13,7 @@ function About() {
       <Header />
       <h1 className={styles.aboutUs}>🌍 About GeoGenius</h1>
      
-   <p>
+   <p className={styles.aboutText}>
     
 At GeoGenius, we believe that understanding geography is more than just memorizing maps — it's about building awareness, empathy, and a sense of global citizenship.
 
@@ -26,14 +26,20 @@ We believe that knowing the world is the first step to understanding it. And wit
    <h3>
     Our Address: Barcelona, 08011, Pl.Cataluña 1.
    </h3>
-   
+  
    <h2 className={styles.joinIcons}> 🌟 Join the Movement</h2>
-<p>Are you ready to become a true citizen of the world?
-Start your journey with GeoGenius — and unlock the genius in you.
+<p className={styles.joinIconsText}>Are you ready to become a true citizen of the world?<br/>
+Start your journey with GeoGenius — and unlock the genius in you.<br/>
 
-Follow us on:
-<Icons />
-   </p>
+Follow us on:<br/></p>
+<div className={styles.iconsContainer}>
+
+  <Icons variation="insta" />
+  <Icons variation="tiktok" />
+  <Icons variation="facebook" />
+</div>
+
+   
       <Footer />
     </div>
     </>
