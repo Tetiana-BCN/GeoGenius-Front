@@ -1,0 +1,29 @@
+body {
+    min-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6rem; 
+    padding-bottom: 6rem;
+    box-sizing: border-box;
+  }
+  
+  .main {
+    width: 100%;
+    
+    text-align: center;
+    padding: 2rem;
+  }
+  
+   .title {
+    font-size: 2.5rem;
+    color: #581381;
+    text-shadow: none;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  
+ 
+  
+  
