@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Modal from "../../components/Modal/Modal.jsx";
+import Modal from "../../components/modal/Modal";
 import { FaEye, FaEyeSlash } from "react-icons/fa"; 
 import styles from "./Form.module.css"; 
 function Form() {

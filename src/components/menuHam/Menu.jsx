@@ -43,7 +43,7 @@ function Menu() {
         <Link to="/" onClick={closeMenu}>Home</Link>
         <Link to="/play" onClick={closeMenu}>Play the Game!</Link>
         <Link to="/login" onClick={closeMenu}>Log In</Link>
-        <Link to="/register" onClick={closeMenu}>Join us</Link>
+        <Link to="/join" onClick={closeMenu}>Join us</Link>
         <Link to="/about" onClick={closeMenu}>About us & Contacts</Link>
         
 

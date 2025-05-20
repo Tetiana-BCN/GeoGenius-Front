@@ -132,6 +132,7 @@ function Login() {
           <h3 className={styles.register}>
             Not a user?{" "}
             <span className={styles.reglink}>Join us</span>
+          
           </h3>
         </form>
   

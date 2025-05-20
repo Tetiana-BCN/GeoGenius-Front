@@ -1,4 +1,4 @@
-import './Reg.module.css'
+import './Join.module.css'
 import Header from '../../components/header/Header'
 import Form from '../../components/form/Form';
 import Footer from "../../components/footer/Footer";
