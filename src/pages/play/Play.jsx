@@ -86,6 +86,7 @@ function Play() {
         <div style={{ marginBottom: "1rem" }}>
   <label className={styles.modeSelector}>Choose quiz mode: </label>
  
+ <div className={styles.container}>
   <select
   className={styles.mode}
   value={mode}
@@ -100,8 +101,8 @@ function Play() {
     className={styles.loadButton}
     onClick={loadQuestion}
     
-    text ="Load New Question" />
- 
+    label="Load new question" />
+ </div>
 </div>
   <div className={styles.quizBox}>
           <p className={styles.question}>{question}</p>

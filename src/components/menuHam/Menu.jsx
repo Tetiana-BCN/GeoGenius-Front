@@ -65,11 +65,13 @@ function Menu() {
               label="Yes"
               onClick={handleLogout}
               type="primary"
+              className="styles.primary"
             />
             <Button
               label="No"
               onClick={cancelLogout}
               type="secondary"
+              className="styles.secondary"
             />
           </div>
         </div>
