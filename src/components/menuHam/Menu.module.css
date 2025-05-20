@@ -96,4 +96,20 @@
     margin-top: 20px;
   }
 
-  
+   .menu .logoutBtn {
+    font-size: 1rem;  
+    font-weight: bold;  
+    color: #3a335c;  
+    text-decoration: none;  
+    padding: 10px 20px;  
+    border-radius: 60%;  
+    background-color: #fadbfa;  
+    transition: background-color 0.3s ease;  
+    margin-right: 1rem;
+
+    
+  }
+
+  .menu .logoutBtn:hover {
+    background-color: #a42174;  
+  }

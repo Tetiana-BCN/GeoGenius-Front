@@ -78,7 +78,7 @@ function Login() {
     return (
       <div className={styles.loginPage}>
         
-        <h1 className={styles.welcome}>Welcome to Geo Quizes!</h1>
+        <h1 className={styles.welcome}>Welcome to Geo Quizes! <br/> Login</h1>
   
         <form onSubmit={handleSubmit} className={styles.form}>
           

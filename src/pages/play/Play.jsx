@@ -85,30 +85,36 @@ function Play() {
         <h1 className={styles.title}>Games for Geography Geniuses</h1>
         <div style={{ marginBottom: "1rem" }}>
   <label className={styles.modeSelector}>Choose quiz mode: </label>
+ 
   <select
-    id={styles.modeSelector}
-    value={mode}
-    onChange={(e) => setMode(e.target.value)}
-  >
-    <option className={styles.findCapital}>Guess the Capital</option>
-    <option className={styles.findCountry}>Guess the Country</option>
-  </select>
-  <button onClick={loadQuestion} style={{ marginLeft: "1rem" }}>
-    Load New Question
-  </button>
-</div>
+  className={styles.mode}
+  value={mode}
+  onChange={(e) => setMode(e.target.value)}
+>
+  <option value="">Select Mode </option>
+  <option value="capital" className={styles.findCapital}>Guess the Capital</option>
+  <option value="country" className={styles.findCountry}>Guess the Country</option>
+</select>
 
-        <div className={styles.quizBox}>
+  <Button
+    className={styles.loadButton}
+    onClick={loadQuestion}
+    
+    text ="Load New Question" />
+ 
+</div>
+  <div className={styles.quizBox}>
           <p className={styles.question}>{question}</p>
           <div className={styles.options}>
             {options.map((option, index) => (
-              <button
+              <Button
                 key={index}
                 className={`${styles.optionBtn} ${selected === option ? styles.selected : ""}`}
                 onClick={() => handleAnswer(option)}
-              >
-                {option}
-              </button>
+                text={option}
+                
+                
+              />
             ))}
           </div>
           <p className={styles.feedback}>{feedback}</p>

@@ -11,16 +11,17 @@
   
   .main {
     width: 100%;
-    max-width: 700px;
+    
     text-align: center;
     padding: 2rem;
   }
   
-  .title {
+   .title {
     font-size: 2.5rem;
     color: #581381;
-    text-shadow: 0 0 10px #f5a1e8;
+    text-shadow: none;
     margin-bottom: 2rem;
+    font-weight: bold;
   }
   
   .quizBox {
@@ -67,6 +68,22 @@
     color: #581381;
   }
 
+  .loadButton {
+    
+    background-color: #581381;
+    color: #fdfdfd;
+    border: none;
+   
+    cursor: pointer;
+    transition: background-color 0.3s;
+     padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+     border-radius: 20px;
+     font-weight: 600;
+   outline: none;
+  
+  }
+
   .modeSelector {
     display: flex;
     align-items: center;
@@ -75,29 +92,36 @@
     margin: 2rem 0;
     font-family: 'Segoe UI', sans-serif;
     font-size: 1rem;
+    color: #1f051f;
+    font-weight: bold;
   }
   
-  .modeSelector label {
-    font-weight: 600;
-    color: #333;
-  }
   
-  .modeSelector select {
-    padding: 0.4rem 0.6rem;
+  
+  .mode {
+    padding: 0.6rem 0.8rem;
     font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+     border-radius: 20px;
     background-color: #fdfdfd;
     transition: border-color 0.3s ease;
+   
+  font-weight: 600;
+  color: #581381;
+   border: 3px solid #581381;
+  
+  outline: none;
+  
+ 
+
   }
   
-  .modeSelector select:focus {
+  .mode:focus {
     outline: none;
     border-color: #a563bd;
-    box-shadow: 0 0 5px rgba(165, 99, 189, 0.5);
+    box-shadow: 0 0 5px #a563bd80;
   }
   
-  .modeSelector button {
+  .mode button {
     padding: 0.45rem 0.9rem;
     font-size: 1rem;
     background-color: #a563bd;
@@ -108,7 +132,7 @@
     transition: background-color 0.3s ease;
   }
   
-  .modeSelector button:hover {
+  .mode button:hover {
     background-color: #8e4ba3;
   }
   

@@ -51,7 +51,8 @@ function Menu() {
         <Button
           label="Logout"
           onClick={confirmLogout}
-          type="secondary"
+          type="logout"
+          className={styles.logoutBtn}
         />
       </div>
 
