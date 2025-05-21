@@ -4,6 +4,9 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import styles from "./Form.module.css"; 
 import Button from "../../components/button/Button";
 
+import Input from "../../components/input/Input";
+
+
 function Form() {
   const [formData, setFormData] = useState({
     name: "",
@@ -17,6 +20,8 @@ function Form() {
     email: "",
     password: "",
   });
+
+  const [showModal, setShowModal] = useState(false);
 
  
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -108,17 +113,17 @@ function Form() {
         
 
         <label className={styles.label}>Name:</label>
-        <input
+        <Input
           type="text"
           name="name"
-          value={formData.nombre}
+          value={formData.name}
           onChange={handleChange}
           className={styles.input}
         />
-        {errors.nombre && <div className={styles.error}>{errors.nombre}</div>}
+        {errors.name && <div className={styles.error}>{errors.name}</div>}
 
         <label className={styles.label}>Email:</label>
-        <input
+        <Input
           type="email"
           name="email"
           value={formData.email}
@@ -129,7 +134,7 @@ function Form() {
 
         <label className={styles.label}>Password:</label>
         <div className={styles.passwordWrapper}>
-          <input
+          <Input
             type={passwordVisible ? "text" : "password"}
             name="password"
             value={formData.password}

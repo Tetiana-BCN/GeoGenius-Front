@@ -24,13 +24,7 @@ function Input({
       {label && <label className={styles.label}>{label}</label>}
 
       <div className={styles.inputWrapper}>
-      {showIcon && (
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/61d432a72ff1dada2a8f96db060757b2443a3653?placeholderIfAbsent=true&apiKey=b846614d0ea04d12bdbfa651b1d58a0f"
-            alt="Icon"
-            className={styles.icon}
-          />
-        )}
+     
         <input
           type={type}
           name={name}    

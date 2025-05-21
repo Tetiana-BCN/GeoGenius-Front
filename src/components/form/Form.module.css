@@ -27,24 +27,34 @@
   }
   
   .button {
-    background-color: #90bbf3;
-    color: black;
-    border: none;
-    border-radius: 25px;
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-    font-weight: bold;
+    background-color: #581381;
+    color: #fff;
+    border-radius: 30px;
+    padding: 1rem 2rem;
     cursor: pointer;
     align-self: center;
-    transition: background 0.3s ease;
+    width: 100%;
+  max-width: 100%; 
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none; 
+text-align: center;
+  transition: background-color 0.3s ease; 
   }
   
   .button:hover {
-    background-color: #76a9ec;
+    background-color: #d156dc;
   }
+
+  
+
+
+
   
   .error {
-    color: red;
+    color: rgb(20, 18, 18);
     font-size: 0.8rem;
     margin-top: 0.4rem;
   }
