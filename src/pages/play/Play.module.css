@@ -163,8 +163,23 @@
   border-radius: 20px;
   background-color: #f5eaff;
   cursor: pointer;
+
+   /* font-weight: 600;
+  font-size: 0.9rem;
+  color: #333; */
 }
 
 .countryCheckbox input {
   accent-color: #581381;
 }
+
+.score {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4a0080;
+}
+
+
+
+
