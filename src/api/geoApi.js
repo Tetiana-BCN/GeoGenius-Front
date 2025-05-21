@@ -1,10 +1,14 @@
 import axios from 'axios';
 
+
 const API = axios.create({
-  baseURL: 'http://localhost:8080/api/geography', 
+  baseURL: process.env.REACT_APP_API_URL, 
 });
 
+export const fetchQuizQuestion = (mode = "country", countries = []) =>
+  API.post('/question', {
+    mode,
+    countries
+  });
 
-export const fetchQuizQuestion = (mode = "country-to-capital") =>
-    API.get(`/question?mode=${mode}`);
   

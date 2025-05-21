@@ -144,4 +144,27 @@
     background-color: #8e4ba3;
   }
   
-  
+  .countryList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.countryCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #581381;
+  border: 2px solid #c75fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  background-color: #f5eaff;
+  cursor: pointer;
+}
+
+.countryCheckbox input {
+  accent-color: #581381;
+}

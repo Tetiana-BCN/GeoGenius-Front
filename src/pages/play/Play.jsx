@@ -14,6 +14,15 @@ function Play() {
   const [selected, setSelected] = useState(null);
   const [feedback, setFeedback] = useState("");
 
+  const [selectedCountries, setSelectedCountries] = useState([]);
+const [countryList, setCountryList] = useState([]);
+useEffect(() => {
+
+  setCountryList([
+    
+  ]);
+}, []);
+
   
   const correctResponses = [
     "Correct! You are a genius!",
@@ -37,17 +46,20 @@ function Play() {
 
   const [mode, setMode] = useState("");
 
-  const loadQuestion = () => {
-    fetchQuizQuestion(mode)
-      .then((res) => {
-        setQuestion(res.data.question);
-        setCorrectAnswer(res.data.correctAnswer);
-        setOptions(res.data.options);
-        setSelected(null);
-        setFeedback("");
-      })
-      .catch((err) => console.error("Error:", err));
-  };
+ const loadQuestion = () => {
+  fetchQuizQuestion(mode, selectedCountries)
+    .then((res) => {
+      setQuestion(res.data.question);
+      setCorrectAnswer(res.data.correctAnswer);
+      setOptions(res.data.options);
+      setSelected(null);
+      setFeedback("");
+    })
+    .catch((err) => console.error("Error:", err));
+
+    
+};
+
   
 
   /*const loadQuestion = () => {
@@ -119,7 +131,34 @@ function Play() {
             ))}
           </div>
           <p className={styles.feedback}>{feedback}</p>
+          <div className={styles.container}>
+  <label className={styles.modeSelector}>
+    Choose up to 5 countries to practice:
+  </label>
+  <div className={styles.countryList}>
+    {countryList.map((country) => (
+      <label key={country} className={styles.countryCheckbox}>
+        <input
+          type="checkbox"
+          value={country}
+          checked={selectedCountries.includes(country)}
+          onChange={(e) => {
+            const value = e.target.value;
+            if (selectedCountries.includes(value)) {
+              setSelectedCountries(selectedCountries.filter(c => c !== value));
+            } else if (selectedCountries.length < 5) {
+              setSelectedCountries([...selectedCountries, value]);
+            }
+          }}
+        />
+        {country}
+      </label>
+    ))}
+  </div>
+</div>
+
         </div>
+      
       </main>
 
       <Footer />
