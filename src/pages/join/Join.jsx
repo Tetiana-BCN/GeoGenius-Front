@@ -10,13 +10,13 @@ function Join () {
     return (
     <>
    	 <Header />
-    	 <main className="join">
+    	 <main className={styles.join}>
       	 				
-   		     <h1 className="joinTitle">
+   		     <h1 className={styles.joinTitle}>
    		         Join us in the world of Geo Quizzes!
    		     </h1>
  			
-        <Form className={styles.form}/>
+        <Form className={styles.regForm}/>
  	   	</main>
         <Footer />
     </>
