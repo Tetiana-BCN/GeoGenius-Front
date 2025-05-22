@@ -12,6 +12,8 @@ function Play() {
   const [selected, setSelected] = useState(null);
   const [feedback, setFeedback] = useState('');
   const [score, setScore] = useState(0);
+  const [savedQuestions, setSavedQuestions] = useState([]);
+
 
   const [mode, setMode] = useState('');
   const [selectedCountries, setSelectedCountries] = useState([]);
@@ -33,6 +35,37 @@ function Play() {
     "Nope! You'll get the next one!"
   ];
 
+  const saveCurrentQuestion = () => {
+  if (!question || options.length === 0) return;
+
+  const quizData = {
+    question,
+    options,
+    correctAnswer,
+  };
+
+  const alreadySaved = savedQuestions.some(
+    (q) => q.question === quizData.question
+  );
+
+  if (alreadySaved) {
+    alert('This question is already saved.');
+    return;
+  }
+
+  
+  if (savedQuestions.length >= 5) {
+    alert('You can only save up to 5 questions.');
+    return;
+  }
+
+  setSavedQuestions((prev) => [...prev, quizData]);
+  console.log('Question saved:', quizData);
+};
+
+
+  
+
   useEffect(() => {
     fetchCountries()
       .then((res) => setCountryList(res.data))
@@ -42,6 +75,7 @@ function Play() {
   const loadQuestion = () => {
     fetchQuizQuestion(mode, selectedCountries)
       .then((res) => {
+        console.log('Quiz data:', res.data);
         setQuestion(res.data.question);
         setCorrectAnswer(res.data.correctAnswer);
         setOptions(res.data.options);
@@ -80,46 +114,28 @@ function Play() {
 
         
         <div style={{ marginBottom: '1rem' }}>
-          <label className={styles.modeSelector}>Choose quiz mode: </label>
+          
           <div className={styles.container}>
-            <select
-              className={styles.mode}
-              value={mode}
-              onChange={(e) => setMode(e.target.value)}
-            >
-              <option value="">Select Mode</option>
-              <option value="capital">Guess the Capital</option>
-              <option value="country">Guess the Country</option>
-            </select>
-
-            <Button
+              <Button
               className={styles.loadButton}
               onClick={loadQuestion}
-              label="Load new question"
+              label="New question"
             />
+            
+            <Button
+  className={styles.mode}
+  onClick={saveCurrentQuestion}
+  label="Save this question"
+  disabled={savedQuestions.length >= 5}
+/>
+
+
+          
           </div>
         </div>
 
         
-        <div className={styles.container}>
-          <label className={styles.modeSelector}>
-            Choose up to 5 countries to practice:
-          </label>
-          <div className={styles.countryList}>
-            {countryList.map((country) => (
-              <label key={country} className={styles.countryCheckbox}>
-                <input
-                  type="checkbox"
-                  value={country}
-                  checked={selectedCountries.includes(country)}
-                  onChange={() => toggleCountrySelection(country)}
-                />
-                {country}
-              </label>
-            ))}
-          </div>
-        </div>
-
+        
        
         <div className={styles.quizBox}>
           <p className={styles.question}>{question}</p>
@@ -136,11 +152,37 @@ function Play() {
           <p className={styles.feedback}>{feedback}</p>
           <p className={styles.score}>Score: {score}</p>
         </div>
+
+        <div className={styles.savedQuestions}>
+  <h3 className={styles.modeSelector}>Saved Questions</h3>
+  {savedQuestions.map((item, index) => (
+    <div key={index} className={styles.savedItem}>
+      <p><strong>Q:</strong> {item.question}</p>
+      <ul>
+        {item.options.map((opt, i) => (
+          <li key={i} style={{ color: opt === item.correctAnswer ? 'green' : 'black' }}>
+            {opt}
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+  <button
+      className={styles.removeButton}
+      onClick={() =>
+        setSavedQuestions((prev) =>
+          prev.filter((_, i) => i !== index)
+        )
+      }
+    >
+      Remove
+    </button>
+</div>
+
       </main>
 
       <Footer />
     </div>
-  );
-}
+  );}
 
 export default Play;
