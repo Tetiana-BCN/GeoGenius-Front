@@ -1,12 +1,80 @@
-# React + Vite
+# GeoGenius 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**GeoGenius** es una aplicación web que pone a prueba tus conocimientos de geografía a través de preguntas sobre países y sus capitales. Este repositorio contiene el código del frontend, construido con **React.js**.
 
-Currently, two official plugins are available:
+🌐 **Descripción**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**GeoGenius** permite a los usuarios:
 
-## Expanding the ESLint configuration
+* Responder preguntas sobre las capitales de los países.
+* Ver sus puntuaciones después de responder correctamente.
+* Guardar preguntas para revisarlas más tarde.
+* Responder nuevas preguntas a través de un sistema interactivo.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🛠 **Tecnologías y herramientas**
+
+* **React.js 19**
+* **Vite**
+* **HTML5 + CSS3**
+* **JavaScript ES6+**
+* **React Router**
+* **Axios** (para realizar solicitudes HTTP)
+* **CSS Modules** (para estilos modulares)
+* **Postman** (para pruebas de la API)
+* **Git & GitHub**
+
+🧱 **Estructura del proyecto**
+
+```
+/geogenius-frontend
+├── package.json
+├── vite.config.js
+├── public/
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── index.css
+│   ├── assets/ # Imágenes y recursos estáticos
+│   ├── components/ # Componentes reutilizables (Botones, Preguntas, etc.)
+│   ├── pages/ # Páginas principales (Play, Home, etc.)
+│   ├── api/ # Archivos para realizar solicitudes al backend
+│   └── styles/ # Archivos de estilo (CSS Modules)
+```
+
+✅ **Requisitos funcionales implementados (Frontend)**
+
+* Página de inicio con el título "GeoGenius" y un acceso a la sección de preguntas.
+* Visualización de preguntas y opciones al hacer clic en "Nueva Pregunta".
+* Sistema de puntuación que incrementa por cada respuesta correcta.
+* Opción de guardar hasta 5 preguntas personalizadas.
+* Diseño responsive para escritorio y móvil.
+
+🔒 **Autenticación (si aplica en el futuro)**
+
+* Integración con el backend en **Spring Boot**.
+* Puede incluirse autenticación basada en JWT o similar.
+
+🎨 **Diseño**
+
+* Diseño **responsive** para escritorio y móvil.
+* Estilos organizados con **CSS Modules**.
+* Componentes diseñados bajo principios de **Atomic Design**.
+
+🚦 **Estado del proyecto**
+
+✅ **Sprint 1**:
+
+* Maquetación inicial
+* Estructura básica de preguntas y respuestas
+* Integración con el backend para obtener preguntas
+
+🚧 **Sprint 2 (en curso)**:
+
+* Guardado de preguntas personalizadas
+* Mejora de la lógica de puntuación
+* Integración con el backend para persistencia
+
+
+📄 **Licencia**
+
+Este proyecto está bajo la licencia **MIT**.

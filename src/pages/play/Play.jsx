@@ -3,7 +3,7 @@ import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/Header';
 import Button from '../../components/button/Button';
 import { useEffect, useState } from 'react';
-import { fetchQuizQuestion, fetchCountries } from '../../api/geoApi';
+import { fetchQuizQuestion } from '../../api/geoApi';
 
 function Play() {
   const [question, setQuestion] = useState('');
@@ -66,14 +66,14 @@ function Play() {
 
   
 
-  useEffect(() => {
-    fetchCountries()
-      .then((res) => setCountryList(res.data))
-      .catch((err) => console.error('Error fetching countries:', err));
-  }, []);
+  // useEffect(() => {
+  //   fetchCountries()
+  //     .then((res) => setCountryList(res.data))
+  //     .catch((err) => console.error('Error fetching countries:', err));
+  // }, []);
 
   const loadQuestion = () => {
-    fetchQuizQuestion(mode, selectedCountries)
+    fetchQuizQuestion()
       .then((res) => {
         console.log('Quiz data:', res.data);
         setQuestion(res.data.question);
